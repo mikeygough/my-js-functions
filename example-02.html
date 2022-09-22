@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="box"></div>
+	
+	<script>
+		// get a reference to the element with id box. 
+		// You'll use this in the example below.
+		const box = document.querySelector('#box')
+
+		// Functions are the core blocks of most programming languages. 
+		// You need to master the syntax of functions! 
+
+		// You can be a better programmer today by internalizing 
+		// this idea: 
+
+		// Functions can take data from outside to control 
+		// what they do. Parameter variables are defined 
+		// with a function the values of which are set when 
+		// the function is called. 
+
+		// Look at the function show below. The parameter is 
+		// str. The parameter always goes inside the (). 
+		// Notice there is no value here! 
+		function show(str) {
+			box.innerHTML += str
+		}
+
+		// To invoke a function and provide a value for a parameter
+		// you call the function and supply the value in the same 
+		// position as the parameter. 
+
+		show('🍎')
+
+		// Notice this page shows the 🍎. 
+		
+		// We call the value passed to a function an "argument". 
+		// So str in the function above is a a variable we call a parameter
+		// and '🍎' is a value and we called it an argument. 
+		
+		// Call the function a few more times below, supply 
+		// a different argument each time: 
+
+
+
+		// Notice each time you called the function it displayed
+		// something different. This new version of the function 
+		// is now infinitely more flexible than the previous version. 
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="box"></div>
+	
+	<script>
+		// get a reference to the element with id box. 
+		// You'll use this in the example below.
+		const box = document.querySelector('#box')
+
+		// Functions can define as many parameters as 
+		// they might need. 
+
+		// The function below defines two parameters: str and count
+		function printCopies(str, count) {
+			for (let i = 0; i < count; i += 1) {
+				box.innerHTML += str
+			}
+			box.innerHTML += '<br>'
+		}
+
+		// When providing arguments to a function the order matters! 
+		// The first argument is assigned to the first parameter,
+		// the second argument is assigned to the second parameter, etc. 
+
+		// printCopies('🍎', 3)
+		
+		// TODO: 
+		// You print 5 oranges 🍊
+		// 8 pears 🍐
+		// 3 bananas 🍌
+		// and 52 koala bears 🐨
+
+		// Hey, did you notice the function above adds a <br>
+		// tag at the end of each line? When you set innerHTML 
+		// you always assign a string. If the string contains 
+		// some HTML tags those tags becomes elements in the DOM!
+
+		// Notice the order of the parameters matters! 
+		// The line below doesn't work because str is 13
+		// and count is 😱!
+
+		// printCopies(13, '😱') 
+
+	</script>
+</body>
+</html>

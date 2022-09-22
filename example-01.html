@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="box"></div>
+	
+	<script>
+		// get a reference to the element with id box. 
+		// You'll use this in the example below.
+		const box = document.querySelector('#box')
+
+		// Functions are the core blocks of most programming languages. 
+		// You need to master the syntax of functions! 
+
+		// A function in JS is written like this:
+		function hello() {
+			box.innerHTML += 'Hello World 🌍'
+		}
+
+		// Above the defintion of the function. A function is useful 
+		// because the code in the block can be executed more than once! 
+		// A block is defined by the { and }. The code between is called 
+		// a "code block".
+
+		// Open this page in the browser. Notice the text does not 
+		// appear in the div#box. This is because the function hello
+		// has not been "called"!
+
+		// Call a function by writing it's name and following the name 
+		// with the (). Uncomment the line below: 
+
+		// hello()
+
+		// Refresh the page. The text shoule appear. You have 
+
+		// Functions are useful because the code they contain can be run 
+		// as many times as needed. Uncomment the lines below: 
+
+		// hello()
+		// hello()
+		// hello()
+		// hello()
+		// hello()
+
+		// heck why not make a loop! Try this:
+
+		// for (let i = 0; i < 100; i += 1) {
+		// 	hello()
+		// }
+
+		// Above you called the hello function 100 times! But you 
+		// only wrote a single line of code. Pretty effecient! 
+
+	</script>
+</body>
+</html>

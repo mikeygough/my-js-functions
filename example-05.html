@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="box"></div>
+	
+	<script>
+		// get a reference to the element with id box. 
+		// You'll use this in the example below.
+		const box = document.querySelector('#box')
+
+		// Let's get back to functions. Review: 
+		
+		// Define a function like this: 
+
+		/* 
+		function calculateArea(length, width) {
+			const area = length * width
+		} 
+		*/
+
+		// Calling your function makes the function run the 
+		// code in the code block: 
+
+		/* 
+		calculateArea(6, 7) 
+		*/
+
+		// Functions define parameters which are variables
+		// that get assigned values from the arguments set 
+		// when the function is called.
+		
+		// In the example above length and width are parameters
+		// 6 and 7 are aguments. 
+
+		// Functions also can return a value. The function above
+		// calculates the area but the answer is never used! 
+
+		// To return a value use the key word return. Like this: 
+
+		function calculateArea(length, width) {
+			const area = length * width
+			return area // returns area! 
+		}
+
+		// A function can only return a single value
+		// When a function hits return the function ends. 
+		// code after the return statement is not executed. 
+
+		// A common mistake is to not use or capture the return value! 
+
+		// Consider the following: 
+
+		calculateArea(12, 13) // nothing happens
+		// The function is called but the value returned is not used. 
+
+		const sqft = calculateArea(6, 7) // The return value is assigned to sqft
+		box.innerHTML = `Square Ft: ${sqft}` // Display sqft
+
+		// A function that returns a value can be called in place of 
+		// where the value is used. 
+
+		console.log(calculateArea(9, 5)) // shows 45 in the console
+		// Here the computer works from inside out. 
+		// First we call the function work through the code there. 
+		// When the function reaches the return statement 
+
+		// This also works: (it will overwrite the result above)
+
+		// box.innerHTML = `Square Ft: ${calculateArea(9, 5)}`
+
+	</script>
+</body>
+</html>
