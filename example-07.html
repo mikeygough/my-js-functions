@@ -23,11 +23,22 @@
 		// Write a function that takes two parameters: 
 		// billAmount and tipPercent
 		// It should calculate and return the tip amount. 
-		
+		function calculateTip(billAmount, tipPercent) {
+			return billAmount * tipPercent;
+		}
 
 		// TODO: Define a new updateDisplay function.  
 		// This function will call caclulate tip function 
-		// and display the results. 
+		// and display the results.
+		function updateDisplay() {
+			// get bill amount and tip percent
+			billAmount = billAmountInput.value;
+			tipPercent = tipPercentInput.value;
+			// calculate tip
+			const tip = calculateTip(billAmount, tipPercent);
+			// update html
+			display.innerHTML = `$${tip}`;
+		}
 
 		// This function will be called by an event listener that 
 		// you will create in the next step. 
@@ -35,12 +46,12 @@
 		// TODO: Add an event listener to the billAmountInput. 
 		// The event should be 'input' and the handler function 
 		// should the updateDisplay function you just wrote. 
+		billAmountInput.addEventListener('input', updateDisplay);
 
 		// TODO: Add an event listener to the tipAmountInput. 
 		// The event should be 'input' and the handler function
 		// should the updateDisplay function. 
-
-		
+		tipPercentInput.addEventListener('input', updateDisplay);
 
 		// Test your work. Entering a value in the bill amount 
 		// or tip amount should update the display and show 
@@ -52,7 +63,7 @@
 		// the base 2 binary values that they work with. 
 
 		// TODO: Read your code and reflect on your work. 
-		// Identify the elements and by their ID names. 
+		// Identify the elements by their ID names. 
 		// connect these to the variables that reference 
 		// those elements. 
 		
@@ -71,7 +82,20 @@
 		// exist in this html file. 
 
 		// TODO: Style the tip caluclator...
-		
+		// billAmountInput
+		billAmountInput.placeholder = 'Bill Amount';
+		billAmountInput.style.width = '100px';
+		billAmountInput.style.height = '30px';
+		billAmountInput.style.margin = '1rem';
+
+		// tipPercentInput
+		tipPercentInput.placeholder = 'Tip Percent (Decimal Form)'
+		tipPercentInput.style.width = '200px';
+		tipPercentInput.style.height = '30px';
+		tipPercentInput.style.margin = '1rem';
+		tipPercentInput.step = '0.01';
+
+		display.style.fontWeight = 'bold';
 
 	</script>
 	<style>
